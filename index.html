@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" name="tên hoa quả" id="s1">
+    <input type="button" value="Xem giá" onclick="checker()">
+    <h3 id="s3"></h3>
+</body>
+<script>
+    let a = "20,000 VNĐ/kg";
+    let b = "30,000 VNĐ/kg";
+    let c = "40,000 VNĐ/kg";
+    let d = "50,000 VNĐ/kg";
+
+    function checker(){
+        let tenHoaQua = document.getElementById('s1').value;
+        switch(tenHoaQua.toLowerCase()){
+            case 'ổi':
+            case 'dưa hấu':
+                p3 = document.getElementById('s3').innerHTML = a;
+                break;
+            case 'táo':
+            case 'xoài':
+                p3 = document.getElementById('s3').innerHTML = b;
+                break;
+            case 'chôm chôm':
+            case 'cam':
+                p3 = document.getElementById('s3').innerHTML = c;
+                break;
+            case 'măng cụt':
+                p3 = document.getElementById('s3').innerHTML = d;
+                break;
+            default:
+                p3 = document.getElementById('s3').innerHTML = "Không có quả bạn muốn tìm";
+        }
+    }
+</script>
+</html>
